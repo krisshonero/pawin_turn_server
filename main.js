@@ -8,7 +8,7 @@ const server = new Turn({
   relayIps: ['0.0.0.0'],       // IP para el tráfico relay
   authMech: 'long-term',
   credentials: {
-    username: 'password',
+    username: 'username',
     credential: 'password'
   },
 });
