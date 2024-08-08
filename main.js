@@ -4,14 +4,13 @@ const server = new Turn({
   // El puerto en el que el servidor TURN escuchará las solicitudes
   listeningPort: 3478,
   // La IP en la que el servidor TURN escuchará las solicitudes
-  listeningIps: ['0.0.0.0'],
-  // Habilita la autenticación con nombre de usuario y contraseña
+  listeningIps: ['0.0.0.0'],  // Escucha en todas las interfaces
+  relayIps: ['0.0.0.0'],       // IP para el tráfico relay
   authMech: 'long-term',
   credentials: {
-    username: 'password'
+    username: 'password',
+    credential: 'password'
   },
-  // Habilita la depuración para obtener más información en la consola
-  debugLevel: 'ALL'
 });
 
 server.start();
